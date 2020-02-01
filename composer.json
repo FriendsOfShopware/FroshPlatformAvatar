@@ -1,0 +1,38 @@
+{
+    "name": "frosh/frosh-platform-avatar",
+    "version": "0.1.0",
+    "type": "shopware-platform-plugin",
+    "description": "Shows avatars from gravatar in the administration",
+    "keywords": [
+        "gravatar",
+        "shopware",
+        "frosh"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "FriendsOfShopware",
+            "homepage": "https://friendsofshopware.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Frosh\\Avatar\\": "src/"
+        }
+    },
+    "extra": {
+        "shopware-plugin-class": "Frosh\\Avatar\\FroshPlatformAvatar",
+        "label": {
+            "de-DE": "Avatare aus Gravatar anzeigen",
+            "en-GB": "Show avatars from Gravatar"
+        },
+        "description": {
+            "de-DE": "Zeigt Avatare in der Administration aus Gravatar",
+            "en-GB": "Shows avatars from gravatar in the administration"
+        }
+    },
+    "require": {
+        "shopware/core": "~6.1",
+        "shopware/administration": "~6.1"
+    }
+}

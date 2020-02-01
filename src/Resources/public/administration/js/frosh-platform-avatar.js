@@ -1,0 +1,1 @@
+(this.webpackJsonp=this.webpackJsonp||[]).push([["frosh-platform-avatar"],{SPdO:function(a,p){}},[["SPdO","runtime"]]]);
