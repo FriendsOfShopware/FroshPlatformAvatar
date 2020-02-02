@@ -1,0 +1,18 @@
+.frosh-avatar-media-gravatar-form {
+    .frosh-avatar-media-gravatar-form__avatar {
+        border-radius: 0;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .frosh-avatar-media-gravatar-form__values {
+        display: grid;
+    }
+
+    &.is--inline {
+        .frosh-avatar-media-gravatar-form__avatar {
+            max-height: 96px;
+            max-width: 96px;
+        }
+    }
+}

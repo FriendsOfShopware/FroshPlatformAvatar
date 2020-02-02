@@ -1,0 +1,13 @@
+{
+    "global": {
+        "frosh-media-gravatar-form": {
+            "title": "Import avatar from Gravatar",
+            "import": "Import",
+            "example": "info@example.com",
+            "email": "E-mail",
+            "url": "URL",
+            "notFoundAlert": "No avatar for email address \"{email}\" found",
+            "loader": "Waiting for gravatar.com to respond"
+        }
+    }
+}
