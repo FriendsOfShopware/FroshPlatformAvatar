@@ -1,0 +1,51 @@
+{% block sw_media_upload_compact_button_context_menu_actions %}
+    {% parent %}
+
+    {% block frosh_avatar_sw_media_upload_compact_button_context_menu_actions_gravatar_import %}
+        <sw-context-menu-item v-if="gravatarEmail" @click="useFroshGravatarImport" class="sw-media-upload__button-frosh-avatar-gravatar-import">
+            {{ $t('global.sw-media-upload.buttonFroshAvatarGravatarImport') }}
+        </sw-context-menu-item>
+    {% endblock %}
+{% endblock %}
+
+{% block sw_media_upload_compact_url_form %}
+    {% parent %}
+
+    {% block frosh_avatar_sw_media_upload_compact_frosh_avatar_gravatar_form %}
+        <frosh-avatar-media-gravatar-form
+            v-if="isFroshAvatarGravatarImport"
+            :email="froshAvatarGravatarEmail"
+            variant="modal"
+            @modal-close="useFileUpload"
+            @media-gravatar-form-submit="onUrlUpload">
+        </frosh-avatar-media-gravatar-form>
+    {% endblock %}
+{% endblock %}
+
+{% block sw_media_upload_regular_header_switch_url_upload %}
+    {% parent %}
+
+    {% block frosh_avatar_sw_media_upload_regular_header_switch_gravatar_import %}
+        <sw-context-menu-item
+            v-if="froshAvatarGravatarEmail && froshAvatarGravatarEmail.length && !isFroshAvatarGravatarImport"
+            @click="useFroshAvatarGravatarImport"
+            class="sw-media-upload__button-gravatar-import">
+            {{ $t('global.sw-media-upload.buttonFroshAvatarGravatarImport') }}
+        </sw-context-menu-item>
+    {% endblock %}
+{% endblock %}
+
+{% block sw_media_upload_regular_actions_add %}
+    {% parent %}
+
+    {% block frosh_avatar_sw_media_upload_regular_actions_gravatar %}
+        <template v-if="isFroshAvatarGravatarImport">
+            <frosh-avatar-media-gravatar-form
+                class="sw-media-upload__frosh-avatar-gravatar-form"
+                variant="inline"
+                :email="froshAvatarGravatarEmail"
+                @frosh-avatar-media-gravatar-form-submit="onUrlUpload">
+            </frosh-avatar-media-gravatar-form>
+        </template>
+    {% endblock %}
+{% endblock %}
