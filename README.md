@@ -7,7 +7,7 @@ The plugin loads avatars in the administration of customers and admin users from
 
 ## Requirements
 
-- Shopware 6.1
+- Shopware 6.1 with [pull request 495](https://github.com/shopware/platform/pull/495)
 - PHP 7.2
 
 
